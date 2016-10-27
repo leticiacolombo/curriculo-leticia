@@ -34,11 +34,11 @@ and open the template in the editor.
                         </ul>
                         <section class="top-bar-section">
                             <ul id="nav" class="right">
-                                <li><a href="#top">Início</a></li>
-                                <li><a href="#sobre">Sobre Mim</a></li>
-                                <li><a href="#profissional">Profissional</a></li>
-                                <li><a href="#contato">Contato</a></li>
-                                <li><a href="english.html">English</a></li>
+                                <li><a href="#top">Home</a></li>
+                                <li><a href="#sobre">About Me</a></li>
+                                <li><a href="#profissional">Professional</a></li>
+                                <li><a href="#contato">Contact</a></li>
+                                <li><a href="index.html">Brazilian</a></li>
                             </ul>
                         </section>
                     </nav>
@@ -59,9 +59,9 @@ and open the template in the editor.
                 <div class="row">
                     <div class="small-12 large-12 columns">
                         <div class="text-center">
-                            <h2>Oi, eu sou a Lê</h2>
-                            <p>Sou criciumense, nascida no dia 30 de Agosto de 1995, atualmente com 21 anos e estudante de Engenharia da Computação.<br>
-                               Para mais informações, me contate através da seção contato.</p>
+                            <h2>Hi, I'm Lê</h2>
+                            <p>I'm criciumense, I was born on 1995, 30th August, today I'm 21 and I'm a Computer Engineering student.<br>
+                               For more information, contact me.</p>
                         </div>
                         <div>
                             <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
@@ -69,7 +69,7 @@ and open the template in the editor.
                                     <figure class="icones">
                                         <img src="img/fundamental.png"/>
                                     </figure>
-                                    <h3 class="text-center">Fundamental</h3>
+                                    <h3 class="text-center">Elementary</h3>
                                     <p>2002 a 2008. Escola Hercílio Amante. Do Primeiro ao Sétimo ano.</p>
                                     <p>2009. Escola Educacional Técnica SATC. Nono ano.</p>
                                 </li>
@@ -77,21 +77,21 @@ and open the template in the editor.
                                     <figure class="icones">
                                         <img src="img/medio.png"/>
                                     </figure>
-                                    <h3 class="text-center">Médio</h3>
+                                    <h3 class="text-center">High School</h3>
                                     <p>2010 a 2012. Escola Educacional Técnica SATC.</p>
                                 </li>
                                 <li class="escolaridade">
                                     <figure class="icones">
                                         <img src="img/tecnico.png"/>
                                     </figure>
-                                    <h3 class="text-center">Técnico</h3>
+                                    <h3 class="text-center">Technical School</h3>
                                     <p>2011 a 2012. Escola Educacional Técnica SATC. Curso Técnico em Informática.</p>
                                 </li>
                                 <li class="escolaridade">
                                     <figure class="icones">
                                         <img src="img/faculdade.png"/>
                                     </figure>
-                                    <h3 class="text-center">Graduação</h3>
+                                    <h3 class="text-center">Graduation</h3>
                                     <p>Desde 2013. Faculdade SATC. Graduação em Engenharia da Computação. Atualmente cursando a oitava fase.</p>
                                 </li>
                             </ul>
@@ -123,45 +123,12 @@ and open the template in the editor.
             </section>
         </main>
         <footer>
-            <div class="row">
-                <section id="contato">
-                    <h2>Contato</h2>
-                    <label for="nome">Nome:
-                        <input type="text" name="nome" id="nome" pattern="[a-zA-Z]" required>
-                    </label>
-                    <label for="email">E-mail:
-                        <input type="email" required id="email">
-                    </label>
-                    <label for="fone">Telefone:
-                        <input type="text" required id="fone">
-                    </label>
-                    <label for="mensagem">Mensagem:
-                        <textarea placeholder="Digite sua mensagem" name="mensagem" id="mensagem" rows="8"></textarea>
-                    </label>
-                    <button class="button success radius" type="submit">Enviar</button>
-                </section>
-            </div>
+            
         </footer>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
         <script>
             $(document).foundation();
-        </script>
-        <script>
-            $(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                });
-            });
         </script>
     </body>
 </html>
