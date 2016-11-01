@@ -38,7 +38,6 @@ and open the template in the editor.
                                 <li><a href="#sobre">Sobre Mim</a></li>
                                 <li><a href="#profissional">Profissional</a></li>
                                 <li><a href="#contato">Contato</a></li>
-                                <li><a href="english.html">English</a></li>
                             </ul>
                         </section>
                     </nav>
@@ -61,7 +60,7 @@ and open the template in the editor.
                         <div class="text-center">
                             <h2>Oi, eu sou a Lê</h2>
                             <p>Sou criciumense, nascida no dia 30 de Agosto de 1995, atualmente com 21 anos e estudante de Engenharia da Computação.<br>
-                               Para mais informações, me contate através da seção contato.</p>
+                                Para mais informações, me contate através da seção <a href="#contato">contato</a>.</p>
                         </div>
                         <div>
                             <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
@@ -99,6 +98,45 @@ and open the template in the editor.
                     </div>
                 </div>
             </section>
+            <section id="complementar">
+                <div class="row">
+                    <div class="small-12 large-12 columns">
+                        <h2>Formação Complementar</h2>
+                        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+                            <li>
+                                <div class="empresa">
+                                    <div class="icone-empresa">
+                                        <img src="img/ingles.png"/>
+                                    </div>
+                                    
+                                    <p>Inglês - New American Inside Out<br>
+                                        360 horas - Duração: 5 Anos<br>
+                                        Unidade de Idiomas SATC</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="eventos">
+                <div class="row">
+                    <div class="small-12 large-12 columns">
+                        <h2>Participação em Eventos</h2>
+                        <ul class="small-block-grid-1 medium-block-grid-1 large-block-grid-1">
+                            <li>
+                                <div class="empresa">
+                                    <div class="icone-empresa">
+                                        <img src="img/fisl.png"/>
+                                    </div>
+                                    
+                                    <p>FISL 2015<br>
+                                        Porto Alegre - RS</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section id="profissional">
                 <div class="row">
                     <div class="small-12 large-12 columns">
@@ -124,44 +162,35 @@ and open the template in the editor.
         </main>
         <footer>
             <div class="row">
-                <section id="contato">
-                    <h2>Contato</h2>
-                    <label for="nome">Nome:
-                        <input type="text" name="nome" id="nome" pattern="[a-zA-Z]" required>
-                    </label>
-                    <label for="email">E-mail:
-                        <input type="email" required id="email">
-                    </label>
-                    <label for="fone">Telefone:
-                        <input type="text" required id="fone">
-                    </label>
-                    <label for="mensagem">Mensagem:
-                        <textarea placeholder="Digite sua mensagem" name="mensagem" id="mensagem" rows="8"></textarea>
-                    </label>
-                    <button class="button success radius" type="submit">Enviar</button>
-                </section>
+                <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+                    <li class="contato">
+                        <h2>Contato</h2>
+                        <form id="contato" method="POST" action="http://contato-twsatc.rhcloud.com/contato-api/email">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome"/>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email"/>
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" name="telefone"/>
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea placeholder="Digite sua mensagem" id="mensagem" name="mensagem" rows="8"></textarea>
+                            <input id="para" name="para" type="hidden" value="leticiacardozo_1@hotmail.com"/>
+                            <input class="button success radius" type="submit"/>
+                        </form>
+                    </li>
+                    <li class="contato">
+                        <p>Endereço: Rua Noé Pirola, 168 - Criciúma - SC<br>
+                           Telefone: (48) 9997-3397<br>
+                           E-mail: leticiacardozo_1@hotmail.com
+                        </p>
+                    </li>
+                </ul>
             </div>
         </footer>
         <script src="js/vendor/jquery.js"></script>
         <script src="js/foundation.min.js"></script>
         <script>
             $(document).foundation();
-        </script>
-        <script>
-            $(function() {
-                $('a[href*=#]:not([href=#])').click(function() {
-                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                        var target = $(this.hash);
-                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        if (target.length) {
-                            $('html,body').animate({
-                                scrollTop: target.offset().top
-                            }, 1000);
-                            return false;
-                        }
-                    }
-                });
-            });
         </script>
     </body>
 </html>
